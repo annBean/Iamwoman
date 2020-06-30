@@ -1,0 +1,673 @@
+ul,li,body {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Cormorant', serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 290px;
+    margin: 0 auto;
+}
+
+.burger {
+    z-index: 6;
+    position: relative;
+    width: 33px;
+    cursor: pointer;
+}
+
+.cross {
+    height: 3px;
+    width: 30px;
+    transform: rotateZ(45deg);
+    background-color: #342b2b;
+    position: absolute;
+    right: 0;
+    top: -100px;
+}
+
+.cross::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    transform: rotateZ(90deg);
+    background-color: #342b2b;
+}
+
+.piece {
+    width: 33px;
+    height: 2px;
+    background-color: #352f2f;
+}
+
+.burger::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    position: absolute;
+    background-color: #352f2f;
+    right: 0;
+    top: 7px;
+}
+
+.burger::after {
+    content: "";
+    width: 18px;
+    height: 2px;
+    position: absolute;
+    background-color: #352f2f;
+    left: 0;
+    top: 14px;
+}
+
+.user-menu_item a{
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+.user-menu {
+    width: 105px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-nav {
+    margin-top: 9px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 165px;
+}
+
+.header-wrap {
+    position: relative;
+}
+
+.main-header h2{
+    font-size: 24px;
+    font-weight: 500;
+    width: 145px;
+    color: #342b2b;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.header_link{
+    color: #79100b;
+    display: block;
+    font-size: 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #79100b;
+    text-decoration: none;
+    width: 105px;
+    position: relative;
+    z-index: 1;
+}
+
+.header_img-wrap {
+    width: 219px;
+    height: 391px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    z-index: 0;
+    background-image: url(img/header_img.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+.main-header {
+    background-color: rgba(241, 237, 228, .8);
+    min-height: 490px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.header-bg {
+    background-color: #ede7e2;
+    background-image: url(img/header_img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -200px 0;
+    min-height: 490px;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+}
+
+.catalog-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header_menu h3 {
+    color: #342b2b;
+    font-size: 24px;
+}
+
+.catalog-list_item a{
+    color: #342b2b;
+    text-decoration: none; 
+    font-size: 16px;
+}
+
+.catalog-list_item{
+    margin-bottom: 20px;
+}
+
+.header_menu{
+    background-image: url(img/clothes.png);
+    background-size: cover;
+    background-position: -50px 0;
+    background-repeat: no-repeat;
+    min-height: 490px;
+    padding-top: 110px;
+    background-color: rgba(241, 237, 228, .8);
+    background-blend-mode: overlay;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    display: none;
+}
+
+.header_menu .container {
+    position: relative;
+}
+
+.active {
+    display: block;
+}
+
+h2 {
+    color: #79100b;
+    text-align: center;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.collection-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+.collection-nav__item a {
+    color: #342b2b;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.nav-active {
+    border-bottom: 1px solid #342b2b;
+}
+
+.new-collection.container{
+    width: 250px;
+    padding-top: 70px;
+    position: relative;
+}
+
+.description {
+    text-align: center;
+}
+
+.description .about {
+    padding: 0;
+    margin: 0;
+}
+
+.price-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-wrap_line {
+    background-color: #342b2b;
+    height: 1px;
+    width: 30px;
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+}
+
+.product__item{
+    display: none;
+}
+
+.slider-active{
+    display: block;
+}
+
+.link-catalog {
+    color: #342b2b;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 45px;
+}
+
+.slider-btn {
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #342b2b;
+    border-right: 1px solid #342b2b;
+    transform: rotateZ(-225deg);
+    position: absolute;
+    top: 335px;
+    left: -30px;
+}
+
+.btn-right {
+    left: auto;
+    right: -30px;
+    transform:
+     rotateZ(-45deg);
+}
+
+.brand__text {
+    background-color: #ece5e1e0;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 25px 15px 0px 15px;
+    margin: 0;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    height: 234px;
+    box-sizing: border-box;
+}
+
+.brand-wrapper {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.brand__img-wrapper {
+    position: absolute;
+    top: 0;
+}
+
+.brand__img-wrapper {
+    background-image: url(img/ahmed-carter-433913-unsplash.jpg);
+    background-size: cover;
+    height: 468px;
+    width: 100%;
+}
+
+.brand {
+    padding-top: 70px;
+}
+
+.brand h2 {
+    margin-bottom: 45px;
+}
+
+.blog__item {
+    display: none;
+}
+
+.mob-active{
+    display: block;
+}
+
+.blog {
+    padding-top: 70px;
+}
+
+.catagory {
+    font-size: 14px;
+    color: #342b23;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.blog__item h3 {
+    color: #342b2b;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.blog__text {
+    font-size: 16px;
+    color: #342b2b;
+    font-weight: 300;
+    text-align: center;
+}
+
+.page-num p{
+    color: #342b2b;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.small {
+    font-size: 16px;
+    position: relative;
+    top: 7px;
+}
+
+.pag__bold-line{
+    width: 78px;
+    height: 3px;
+    background-color: #342b2b;
+    margin-bottom: 10px;
+}
+
+.pag__line {
+    margin-top: 0;
+    height: 1px;
+    background-color: #342b2b;
+    width: 207px;
+}
+
+.pagination{
+    margin-left: 45px;
+    position: relative;
+    padding-top: 79px;
+}
+
+.page-num {
+    top: 0;
+    position: absolute;
+}
+
+.go-to-blog {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.go-to-blog a {
+    text-decoration: none;
+    color: #79100b;
+    border-bottom: 1px solid #79100b ;
+    padding-bottom: 5px;
+}
+   
+.subsbribe {
+    background-image: url("img/sub-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.subcribe-wrap{
+    background-color: #ece5e1e0;
+    width: 285px;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subcribe-wrap h3{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 35px;
+    width: 175px;
+    color: #79100b;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    
+}
+
+.subcribe-wrap input{
+    border: 0;
+    background-color: transparent ;
+    width: 180px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    color: black;
+    font-size: 14px;
+}
+
+.subcribe-wrap button{
+    display: block;
+    width: 160px;
+    height: 35px;
+    background-color: #79100b;
+    color: white;
+    margin-top: 40px;
+    border: 0;
+}
+
+.polytics {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    opacity: .7;
+    color: #342b23;
+    text-align: center;
+    line-height: 11px;
+    margin-top: 12px;
+}
+
+.brand__img-wrapper--second {
+    display: none;
+    background-image: url(img/ahmed-carter-433915-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: absolute;
+}
+
+@media (min-width: 1180px){
+    .container {
+        width: 1180px;
+    }
+
+    .main-header {
+        background-color: transparent;
+    }
+
+    .header-bg {
+        width: 50%;
+        right: 0;
+        background-color: rgba(241, 237, 228, .8);
+        background-blend-mode: overlay;
+        min-height: 840px;
+        background-position: right;
+    }
+
+    .main-header {
+        min-height: 840px;
+    }
+
+    .header-wrap h2 {
+        font-size: 48px;
+        width: 350px;
+    }
+
+    .header_img-wrap {
+        width: 605px;
+        height: 680px;
+        right: 200px;
+    }
+
+    .header_link {
+        font-size: 18px;
+        width: 144px;
+    }
+
+    .product__item {
+        display: block;
+    }
+
+    .product-list {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .slider-btn {
+        display: none;
+    }
+
+    .new-collection.container {
+        width: 1180px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    .collection-nav {
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+
+    .collection-nav a {
+        font-size: 18px;
+    }
+
+    .collection-nav li {
+        margin-right: 35px;
+    }
+
+    .about {
+        font-size: 30px;
+        padding-top: 25px !important;
+    }
+
+    .link-catalog {
+        font-size: 18px;
+    }
+
+    .brand__img-wrapper {
+        width: 500px;
+        height: 713px;
+        left: 85px;
+    }
+
+    .brand {
+        min-height: 1275px;
+    }
+
+    .brand__text {
+        font-size: 20px;
+        position: absolute;
+        width: 613px;
+    }
+
+    .brand__text--first {
+        min-height: 243px;
+        right: 65px;
+        top: 72px;
+    }
+
+    .brand__text--second {
+        top: 805px;
+        padding-top: 75px;
+        left: 80px;
+    }
+
+    .brand__img-wrapper--second {
+        display: block;
+        right: 60px;
+        top: 455px;
+        width: 500px;
+        height: 671px;
+    }
+
+    .blog_img-wrapper {
+        width: 400px;
+    }
+
+    .blog__item {
+        display: block;
+        width: 400px;
+        margin-right: 30px;
+    }
+
+    .blog.container {
+        margin: 0;
+        width: initial;
+        margin-bottom: 115px;
+    }
+
+    .blog__list {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    .pagination {
+        display: none;
+    }
+
+    .subsbribe {
+       
+        width: 1180px;
+        margin: 0 auto;
+    }
+
+    .subsbribe-wrap {
+        width: 875px;
+        min-height: 395px;
+        padding-top: 85px;
+        box-sizing: border-box;
+    }
+
+    .subcribe-wrap h3 {
+        font-size: 36px;
+        width: 732px;
+
+    }
+
+    #email {
+        width: 270px;
+    }
+
+    .polytics {
+        font-size: 12px;
+        width: 278px;
+    }
+
+    .go-to-blog {
+        font-size: 18px;
+    }
+
+    .blog__item .blog_img-wrapper {
+        width: 400px;
+        height: 618px;
+        overflow: hidden;
+    }
+
+    .blog_img-wrapper img {
+        vertical-align: middle;
+    }
+
+    .blog h2 {
+        margin-bottom: 120px;
+    }
+
+    .brand h2 {
+        margin-bottom: 120px;
+    }
+}
